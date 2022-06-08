@@ -1,0 +1,19 @@
+# Print the prime numbers which are between 1 to entered limit number (n).
+
+n = int(input("Please enter a number: "))
+prime_list = []
+
+def isprime(num):
+    i = 2
+    while i < num:
+        if num % i != 0:
+            i += 1
+        else:
+            return False
+    return True
+
+for num in range(2, n+1):
+    if isprime(num) == True:
+        prime_list.append(num)
+
+print(prime_list)
